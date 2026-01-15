@@ -1,3 +1,5 @@
+import 'package:mixin_practice/task_1/creature.dart';
+
 mixin FlutterMixin {
  void flutter () {
    print('Fluttering wings...');
@@ -17,10 +19,9 @@ mixin WriteMixin {
 }
 
 
-class Bird with FlutterMixin, ChirpMixin {
- final String name;
+class Bird extends Creature with FlutterMixin, ChirpMixin {
 
- Bird(this.name);
+ Bird(String name) : super('Bird');
 
  void info() {
    print('BirdName: $name');
